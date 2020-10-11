@@ -42,8 +42,10 @@ function generatePassword() {
   else if (letterCase === "both") {
     passwordString = passwordString.concat(lowerAndUpper);
   }
-  else {
+  console.log(letterCase);
+  while (letterCase !== 'lower' && letterCase !== 'both' && letterCase !== 'upper') {
     alert("Invalid input. Please enter Enter 'upper', 'lower' or 'both'.");
+    var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'?");
   }
 
   var numericCharacter = confirm("Do you want your password to have numbers?");
