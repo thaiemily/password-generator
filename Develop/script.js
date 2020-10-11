@@ -25,18 +25,14 @@ function generatePassword() {
 
   var size = prompt("What is the length?");
   size = Number.parseInt(size, 10);
-  if (Number.isNaN(size)) {
-    alert("Invalid length. Please enter a valid number between 8 and 128.");
-  }
-
-  if (size < 8 || size > 128) {
-    alert("Invalid length. Please select a value between 8 and 128.");
-    return '';
-  }
   
-  console.log('size', size, typeof size);
+  while (Number.isNaN(size) || size < 8 || size > 12) {
+    alert("Invalid length. Please enter a valid number between 8 and 128.");
+    var size = prompt("What is the length?");
+    size = Number.parseInt(size, 10);
+  }
 
-  var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'.");
+  var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'?");
   if (letterCase === "lower") {
     passwordString = passwordString.concat(lowercaseLetters);
   }
@@ -50,13 +46,13 @@ function generatePassword() {
     alert("Invalid input. Please enter Enter 'upper', 'lower' or 'both'.");
   }
 
-  var numericCharacter = confirm("Do you want you password to have numbers?");
-  if (confirm(numericCharacter)) {
+  var numericCharacter = confirm("Do you want your password to have numbers?");
+  if (numericCharacter) {
     passwordString = passwordString.concat(allDigits);
   }
   
   var specialCharacter = confirm("Do you want you password to have special characters?");
-  if (confirm(specialCharacter)) {
+  if (specialCharacter) {
     passwordString = passwordString.concat(characters);
   }
 
