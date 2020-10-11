@@ -38,7 +38,7 @@ function generatePassword() {
 
   var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'.");
   if (letterCase === "lower") {
-    passwordString = passwordString.concat(lowerCaseLetters);
+    passwordString = passwordString.concat(lowercaseLetters);
   }
   else if (letterCase === "upper") {
     passwordString = passwordString.concat(uppercaseLetters);
@@ -65,7 +65,7 @@ function generatePassword() {
   var generated = "";
 
   for (var i = 0; i < size; i++) {
-    generated += passwordString.charAt(Math.floor(Math.random() * passwordString.size));
+    generated += passwordString[Math.floor(Math.random() * passwordString.length)]
   }
 
   return generated;
