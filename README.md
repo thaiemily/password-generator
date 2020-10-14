@@ -10,7 +10,7 @@ A website that generates a random password based on the user's desired criteria.
 
 https://geneskit.github.io/password-generator/
 
-![](password-generator-ss.PNG)
+![](assets\images\password-generator-ss.PNG)
 
 ## Built With
 
