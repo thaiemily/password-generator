@@ -34,7 +34,7 @@ A website that generates a random password based on the user's desired criteria.
 - CSS
 - JavaScript
 
-## Website Link:
+## Deployed Link:
 
 https://geneskit.github.io/password-generator/
 
