@@ -30,6 +30,7 @@ function generatePassword() {
     alert("Invalid length. Please enter a valid number between 8 and 128.");
     var size = prompt("What is the length?");
     size = Number.parseInt(size, 10);
+    return;
   }
 
   var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'?");
@@ -48,7 +49,6 @@ function generatePassword() {
     var letterCase = prompt("Do you want your password to have upper case or lower case letters? \nEnter 'upper', 'lower' or 'both'?");
   }
 
-  var numericCharacter = confirm("Do you want your password to have numbers?");
   if (numericCharacter) {
     passwordString = passwordString.concat(allDigits);
   }
