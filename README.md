@@ -1,4 +1,4 @@
-# Module 3 Challenge: Password Generator
+# Module 3 JavaScript Challenge: Password Generator
 
 ## Purpose
 
